@@ -442,6 +442,15 @@ body {
 .header.deactive {
   transform: translateY(-150%);
 }
+@media only screen and (max-width: 1024px) {
+  .header {
+    padding: 26px 58px 14px 58px;
+    position: absolute;
+  }
+  .header.deactive {
+    transform: none;
+  }
+}
 
 .nav {
   display: flex;
@@ -456,6 +465,34 @@ body {
 }
 .nav a:last-child {
   margin-right: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #3137C9;
+    padding: 20px;
+    border-radius: 20px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 100;
+    transition: 0.3s linear;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .nav .nav__right {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav .nav__left {
+    display: flex;
+    justify-content: center;
+  }
+  .nav .nav__left a {
+    margin-right: 10px;
+  }
 }
 
 .header__logo {
@@ -488,6 +525,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100vh;
 }
 
 .section {
@@ -500,6 +538,11 @@ body {
 }
 .section__sing:hover .sing__img {
   transform: scale(1.03);
+}
+@media only screen and (max-width: 1024px) {
+  .section__sing:hover .sing__img {
+    transform: none;
+  }
 }
 
 .section__heart {
@@ -1094,6 +1137,13 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 1024px) {
+  .plan__card {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .card {
   width: 275px;
@@ -1109,6 +1159,11 @@ body {
   padding: 34px 18px;
   text-align: center;
   transition: 0.3s linear;
+}
+@media only screen and (max-width: 1024px) {
+  .card {
+    margin: 20px;
+  }
 }
 .card:hover {
   animation: rotate__card 0.3s linear;
@@ -1149,10 +1204,22 @@ body {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 1024px) {
+  .sing__item {
+    flex-direction: column-reverse;
+  }
+}
 
 .sing__text {
   width: 50%;
   padding-left: 97px;
+}
+@media only screen and (max-width: 1024px) {
+  .sing__text {
+    width: 100%;
+    text-align: center;
+    padding: 97px;
+  }
 }
 
 .sing__title {
@@ -1162,6 +1229,12 @@ body {
   line-height: 45px;
   width: 430px;
 }
+@media only screen and (max-width: 1024px) {
+  .sing__title {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 .sing__subtitle {
   font-style: normal;
@@ -1170,6 +1243,12 @@ body {
   line-height: 19px;
   width: 390px;
   margin: 11px 0 33px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .sing__subtitle {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .sing__btn {
@@ -1197,6 +1276,12 @@ body {
   object-fit: cover;
   transition: 0.3s linear;
 }
+@media only screen and (max-width: 1024px) {
+  .sing__img {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .heart {
   width: 100%;
@@ -1222,6 +1307,13 @@ body {
   align-items: center;
   padding: 150px 97px;
 }
+@media only screen and (max-width: 1024px) {
+  .desc__mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+}
 
 .desc__mob-text {
   width: 50%;
@@ -1232,12 +1324,25 @@ body {
 .desc__mob-text .sing__subtitle {
   width: 638px;
 }
+@media only screen and (max-width: 1024px) {
+  .desc__mob-text {
+    width: 100%;
+  }
+  .desc__mob-text .sing__subtitle {
+    width: 100%;
+  }
+}
 
 .desc__mob-img {
   position: relative;
   width: 50%;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 1024px) {
+  .desc__mob-img {
+    width: 100%;
+  }
 }
 .desc__mob-img .img__desc {
   width: 546px;
